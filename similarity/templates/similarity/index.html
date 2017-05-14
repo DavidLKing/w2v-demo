@@ -23,13 +23,14 @@
           <br>
           This is our awesome <a href="https://code.google.com/archive/p/word2vec/">Word2Vec</a> demo.<br>
           <br>
-            Input 1-3 words here:
+            Input 3 words here:
             <form action="/similarity/" method="post">
               {% csrf_token %}
-              <!--<input placeholder="word1" name="word1">-->
               {{ form }}
-              <!--<input placeholder="word2" name="word2">-->
-              <input type="submit" value="is to _____ ?" />
+{#              <input placeholder="word3" name="word3">#}
+{#              <input placeholder="word2" name="word2">#}
+{#              <input placeholder="word1" name="word1">#}
+              <input type="submit" value="is not to _____ ?" />
             </form>
               <br>
               <br>

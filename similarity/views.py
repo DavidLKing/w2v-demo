@@ -7,7 +7,8 @@ import gensim
 
 directory = os.path.abspath(os.path.dirname(__file__))
 print("Loading vectors")
-vectors = gensim.models.Word2Vec.load_word2vec_format(os.path.join(directory, './vectors/vectors.bin'), binary=True)
+# vectors = gensim.models.Word2Vec.load_word2vec_format(os.path.join(directory, './vectors/vectors.bin'), binary=True)
+vectors = gensim.models.KeyedVectors.load_word2vec_format(os.path.join(directory, './vectors/vectors.50.bin'), binary=True)
 
 # def index(request):
     # return render(request, open('templates/index.html', 'r'))
@@ -37,6 +38,7 @@ def index(request):
             w2 = request.POST['word2'].lower()
             w3 = request.POST['word3'].lower()
             # all are there
+            # TODO clean this up
             if w2 != '' and w3 != '':
                 if w1 not in vectors or w2 not in vectors or w3 not in vectors:
                     sim = "One of your words is not in vocabulary"

@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^similarity/', include('similarity.urls')),
+    # url(r'^similarity/', include('urls')),
     url(r'^admin/', admin.site.urls),
 ]

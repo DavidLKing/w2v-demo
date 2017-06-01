@@ -9,9 +9,10 @@ import urllib
 directory = os.path.abspath(os.path.dirname(__file__))
 print("Loading vectors")
 # vectors = gensim.models.Word2Vec.load_word2vec_format(os.path.join(directory, './vectors/vectors.bin'), binary=True)
-vecfile = urllib.request.urlopen('http://www.ling.osu.edu/~king/vectors.bin')
+# vecfile = urllib.request.urlopen('http://www.ling.osu.edu/~king/vectors.bin')
 # vectors = gensim.models.KeyedVectors.load_word2vec_format(os.path.join(directory, './vectors/vectors.50.bin'), binary=True)
-vectors = gensim.models.KeyedVectors.load_word2vec_format(vecfile, binary=True)
+vectors = gensim.models.KeyedVectors.load_word2vec_format(os.path.join(directory, './vectors/vectors.bin'), binary=True)
+# vectors = gensim.models.KeyedVectors.load_word2vec_format(vecfile, binary=True)
 
 # def index(request):
     # return render(request, open('templates/index.html', 'r'))

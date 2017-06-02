@@ -1,1 +1,1 @@
-web: python3 manage.py runserver &> log.txt
+web: python3 manage.py runserver 0.0.0.0:$PORT &> log.txt

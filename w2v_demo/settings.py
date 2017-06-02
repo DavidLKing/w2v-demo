@@ -100,7 +100,8 @@ SECURE_SSL_REDIRECT = False
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 # STATIC_URL = '/static/'
-STATIC_URL = os.path.join(BASE_DIR, 'static/' )
+# STATIC_URL = os.path.join(BASE_DIR, 'static/' )
+STATIC_URL = os.path.join(BASE_DIR, 'staticfiles/' )
 # STATIC_ROOT = '/static/'
 STATIC_ROOT = 'static/'
 # change to exact path in production
